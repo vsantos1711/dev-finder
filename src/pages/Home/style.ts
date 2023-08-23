@@ -2,9 +2,11 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
+  margin: 0 auto;
   flex-direction: column;
   height: 100vh;
-  align-items: center;
+  max-width: 800px;
   justify-content: center;
-  background-color: ${({ theme }) => theme.primaryColor};
-` 
+  align-items: center;
+  background-color: ${({ theme }) => theme.backgroundColor};
+`
