@@ -9,3 +9,15 @@ html {
   transition: ease 0.3s;
   text-decoration: none;
 }
+
+button{
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+input{
+  all: unset;
+  background: none;
+  border: none;
+}
