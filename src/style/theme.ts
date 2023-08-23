@@ -7,7 +7,7 @@ export type Theme = {
 
 export const defaultTheme: Theme = {
   primaryColor: '#1F2A48',
-  secondaryColor: '#1F2A48',
+  secondaryColor: '#0079FE',
   backgroundColor: '#141C2F',
   textColor: '#FFFFFF',
 }
