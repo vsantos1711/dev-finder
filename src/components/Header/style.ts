@@ -9,12 +9,12 @@ export const Header = styled.header`
 `;
 
 export const Title = styled.h1`
-  color: ${({ theme }) => theme.textColor};
+  color: ${({ theme }) => theme.primaryTextColor};
   font-size: 2rem;
 `;
 
 export const Theme = styled.button`
-  color: ${({ theme }) => theme.textColor};
+  color: ${({ theme }) => theme.primaryTextColor};
   display: flex;
   align-items: center;
   gap: 0.5rem;
