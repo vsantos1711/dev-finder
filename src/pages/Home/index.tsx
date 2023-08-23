@@ -1,9 +1,12 @@
 import * as S from './style.ts'
+import {Input} from "../../components/Input";
+import {Header} from "../../components/Header";
 
 export const Home = () => {
   return (
     <S.Container>
-      <h2>Start of DevFinder Project</h2>
+      <Header/>
+      <Input/>
     </S.Container>
   );
 };
