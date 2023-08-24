@@ -10,11 +10,13 @@ export const InputContainer = styled.div`
   justify-content: space-between;
   border-radius: 1rem;
   background-color: ${({ theme }) => theme.primaryColor};
+  color: ${({ theme }) => theme.secondaryColor};
 `;
 
 export const Input = styled.input`
   width: 100%;
-  color: ${({ theme }) => theme.textColor};
+  font-size: 1.2rem;
+  color: ${({ theme }) => theme.primaryTextColor};
   &::placeholder {
    color: ${({ theme }) => theme.primaryTextColor}
   }
