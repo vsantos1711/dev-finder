@@ -72,13 +72,18 @@ export const UserItemData = styled.span`
 
 export const UserLinksContent = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 `;
 export const UserLink = styled.a`
-  padding: 0.5rem 2rem;
+  min-width: 200px;
+  padding: 0.5rem 0 ;
   display: flex;
+  gap: 0.7rem;
   align-items: center;
   color: ${({ theme }) => theme.primaryTextColor};
+  &:hover {
+    color: ${({ theme }) => theme.secondaryColor};
+  }
 `;
