@@ -1,44 +1,50 @@
 import * as S from './style.ts';
 import {Building2, Link, MapPin, Twitter} from "lucide-react";
-export const Card = () => {
+import {CardProps} from "../../pages/Home/api/interface";
+
+export const Card = ({name, created_at, login, url, bio, public_repos, followers, following, location, htmlUrl, twitter_username, blog, avatar_url}: CardProps) => {
   return (
     <S.CardContainer>
       <S.Image>
-        <img alt="profile photo" src='https://avatars.githubusercontent.com/u/104466068?v=4'/>
+        <img alt="profile photo" src={avatar_url}/>
       </S.Image>
 
       <S.DivContent>
         <S.Title>
           <S.H1>
-            Vinícius Francisco
+            {name}
           </S.H1>
 
-          <S.Span>Joined 25 Jan 2011</S.Span>
+          <S.Span>Joined at {new Date(created_at).toLocaleDateString('en-US',{
+            day: '2-digit',
+            month: 'long',
+            year: 'numeric'
+          })}</S.Span>
         </S.Title>
 
-        <S.Link href='#'>
-          @vsantos1711
+        <S.Link href={url}>
+          @{login}
         </S.Link>
 
         <S.Paragraph>
-          This profile has no bio. This profile has no bio.
+          {bio}
         </S.Paragraph>
 
         <S.UserContent>
 
           <S.UserItem>
             <S.UserItemTitle>Repos</S.UserItemTitle>
-            <S.UserItemData>8</S.UserItemData>
+            <S.UserItemData>{public_repos}</S.UserItemData>
           </S.UserItem>
 
           <S.UserItem>
             <S.UserItemTitle>Followers</S.UserItemTitle>
-            <S.UserItemData>3938</S.UserItemData>
+            <S.UserItemData>{followers}</S.UserItemData>
           </S.UserItem>
 
           <S.UserItem>
             <S.UserItemTitle>Following</S.UserItemTitle>
-            <S.UserItemData>9</S.UserItemData>
+            <S.UserItemData>{following}</S.UserItemData>
           </S.UserItem>
 
         </S.UserContent>
@@ -46,19 +52,19 @@ export const Card = () => {
         <S.UserLinksContent>
           <S.UserLink href='#'>
             <MapPin/>
-            San Francisco
+            {location ?? 'Not available' }
           </S.UserLink>
           <S.UserLink href='#'>
             <Twitter />
-            Not available
+            {twitter_username ?? 'Not available' }
           </S.UserLink>
           <S.UserLink href='#'>
             <Link />
-            https://github.blog
+            {blog ?? 'Not available' }
           </S.UserLink>
           <S.UserLink href='#'>
             <Building2/>
-            @agithub
+            {htmlUrl ?? 'Not available' }
           </S.UserLink>
         </S.UserLinksContent>
 
