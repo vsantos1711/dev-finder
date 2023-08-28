@@ -2,29 +2,37 @@ import * as S from './style.ts';
 import {Building2, Link, MapPin, Twitter} from "lucide-react";
 import {CardProps} from "../../pages/Home/api/interface";
 
+
 export const Card = ({name, created_at, login, url, bio, public_repos, followers, following, location, htmlUrl, twitter_username, blog, avatar_url}: CardProps) => {
   return (
     <S.CardContainer>
-      <S.Image>
-        <img alt="profile photo" src={avatar_url}/>
-      </S.Image>
 
-      <S.DivContent>
-        <S.Title>
-          <S.H1>
-            {name}
-          </S.H1>
+        <S.TitleContainer>
+          <S.Image>
+            <img alt="profile photo" src={avatar_url}/>
+          </S.Image>
 
-          <S.Span>Joined at {new Date(created_at).toLocaleDateString('en-US',{
-            day: '2-digit',
-            month: 'long',
-            year: 'numeric'
-          })}</S.Span>
-        </S.Title>
+          <S.TitleContent>
+            <S.Title>
 
-        <S.Link href={url}>
-          @{login}
-        </S.Link>
+              <S.H2>
+                {name}
+              </S.H2>
+
+              <S.Span>Joined at {new Date(created_at).toLocaleDateString('en-US',{
+                day: '2-digit',
+                month: 'long',
+                year: 'numeric'
+              })}</S.Span>
+            </S.Title>
+
+            <S.Link href={url}>
+              @{login}
+            </S.Link>
+          </S.TitleContent>
+        </S.TitleContainer>
+
+      <S.ContentContainer>
 
         <S.Paragraph>
           {bio}
@@ -46,7 +54,6 @@ export const Card = ({name, created_at, login, url, bio, public_repos, followers
             <S.UserItemTitle>Following</S.UserItemTitle>
             <S.UserItemData>{following}</S.UserItemData>
           </S.UserItem>
-
         </S.UserContent>
 
         <S.UserLinksContent>
@@ -68,7 +75,7 @@ export const Card = ({name, created_at, login, url, bio, public_repos, followers
           </S.UserLink>
         </S.UserLinksContent>
 
-      </S.DivContent>
+      </S.ContentContainer>
 
     </S.CardContainer>
   );

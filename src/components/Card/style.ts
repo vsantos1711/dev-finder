@@ -3,48 +3,71 @@ import styled from 'styled-components'
 export const CardContainer = styled.div`
   color: ${({ theme }) => theme.primaryTextColor};
   background-color: ${({ theme }) => theme.primaryColor};
-  padding: 3rem;
+  padding: 2rem;
   border-radius: 1rem;
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+`;
+export const TitleContainer = styled.div`
+  font-size: x-large;
+  display: flex;
+  align-items: center;
 `;
 
 export const Image = styled.div`
-  width: 20%;
-  height: auto;
+  width: 12rem;
+  padding: 1rem;
   img {
     border-radius: 50%;
   }
 `;
 
-export const DivContent = styled.div`
+export const TitleContent = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 80%;
 `;
 
 export const Title = styled.div`
-  font-size: x-large;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.5rem;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  @media (max-width: 550px) {
+    flex-direction: column;
+  }
 `;
-export const H1 = styled.h2`
+
+export const ContentContainer = styled.div`
+  align-self: end;
+  width: 80%;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
+
+export const H2 = styled.h2`
   font-size: x-large;
-  
+  width: fit-content;
 `;
 
 export const Span = styled.span`
   font-size: small;
+  font-weight: lighter;
+  justify-self: flex-end;
 `;
 
 export const Link = styled.a`
   color: ${({ theme }) => theme.secondaryColor};
   display: block;
-  margin-bottom: 2rem;
+  font-size: 1rem;
+  @media (max-width: 550px) {
+    align-self: center;
+  }
 `;
 
 export const Paragraph = styled.p`
-  color: ${({ theme }) => theme.secondaryTextColor};
+  color: ${({ theme }) => theme.primaryTextColor};
   margin-bottom: 2rem;
 `;
 
@@ -67,7 +90,6 @@ export const UserItemTitle = styled.p`
 export const UserItemData = styled.span`
   font-size: 1.7rem;
   font-weight: bold;
-  
 `;
 
 export const UserLinksContent = styled.div`
