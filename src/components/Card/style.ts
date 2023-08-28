@@ -26,6 +26,7 @@ export const TitleContent = styled.div`
   display: flex;
   flex-direction: column;
   width: 80%;
+
 `;
 
 export const Title = styled.div`
@@ -35,6 +36,7 @@ export const Title = styled.div`
   margin-bottom: 1rem;
   @media (max-width: 550px) {
     flex-direction: column;
+    align-items: start;
   }
 `;
 
@@ -61,9 +63,7 @@ export const Link = styled.a`
   color: ${({ theme }) => theme.secondaryColor};
   display: block;
   font-size: 1rem;
-  @media (max-width: 550px) {
-    align-self: center;
-  }
+
 `;
 
 export const Paragraph = styled.p`
