@@ -7,27 +7,33 @@ import {
   getData
 } from './api'
 import { CardProps } from "./api/interface";
+import { toast } from "react-toastify";
+import { Alert } from "../../components/Alert";
 
 export const Home = () => {
 
   const[data, setData] = useState<CardProps>()
   const[username, setUsername] = useState('')
-  const[alert, setAlert] = useState('')
 
   async function clickHandler() {
-    if(!username) setAlert('Please, enter a username')
-    const userInfos = await getData(username);
-    setData(userInfos);
-    setAlert('')
+    if(!username) return toast.warning('Please, enter a username')
+    try {
+      const userInfos = await getData(username);
+      toast.success('Github user info loaded!');
+      setData(userInfos);
+    } catch (error) {
+      toast.error('User not found!');
+    }
+
   }
+
 
   return (
     <S.Container>
       <Header/>
       <Input onClick={clickHandler} setUsername={setUsername}/>
-      {data && !alert && <Card {...data} />}
-      {alert && <h2>{alert}</h2>}
-
+      {data && <Card {...data} />}
+      <Alert />
     </S.Container>
   );
 };
