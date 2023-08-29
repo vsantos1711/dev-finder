@@ -1,6 +1,7 @@
 import * as S from './style.ts';
 import {Building2, Link, MapPin, Twitter} from "lucide-react";
 import {CardProps} from "../../pages/Home/api/interface";
+import {Calendar} from "../Calendar";
 
 export const Card = ({name, created_at, login, url, bio, public_repos, followers, following, location, htmlUrl, twitter_username, blog, avatar_url}: CardProps) => {
   return (
@@ -74,6 +75,9 @@ export const Card = ({name, created_at, login, url, bio, public_repos, followers
         </S.UserLinksContent>
       </S.ContentContainer>
     </S.CardContainer>
+      <S.CardContainer>
+        <Calendar username={login}/>
+      </S.CardContainer>
     </>
   );
 };
