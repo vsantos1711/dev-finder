@@ -3,30 +3,34 @@ import styled from 'styled-components'
 export const CardContainer = styled.div`
   color: ${({ theme }) => theme.primaryTextColor};
   background-color: ${({ theme }) => theme.primaryColor};
-  padding: 2rem;
+  padding: 1rem 2rem;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
+  margin-bottom: 0.5rem;
 `;
 export const TitleContainer = styled.div`
-  font-size: x-large;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 `;
 
 export const Image = styled.div`
-  width: 12rem;
-  padding: 1rem;
-  img {
+  width: 8rem;
+  padding: 0.5rem 0;
+  img { 
     border-radius: 50%;
   }
+
 `;
 
 export const TitleContent = styled.div`
   display: flex;
   flex-direction: column;
-  width: 80%;
-
+  width: 75%;
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
 `;
 
 export const Title = styled.div`
@@ -34,15 +38,17 @@ export const Title = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1rem;
+  
   @media (max-width: 550px) {
     flex-direction: column;
+    gap: 0.5rem;
     align-items: start;
   }
 `;
 
 export const ContentContainer = styled.div`
   align-self: end;
-  width: 80%;
+  width: 75%;
   @media (max-width: 768px) {
     width: 100%;
   }

@@ -1,39 +1,38 @@
 import * as S from './style.ts';
 import {Building2, Link, MapPin, Twitter} from "lucide-react";
 import {CardProps} from "../../pages/Home/api/interface";
-
+import GitHubCalendar from "react-github-calendar"
 
 export const Card = ({name, created_at, login, url, bio, public_repos, followers, following, location, htmlUrl, twitter_username, blog, avatar_url}: CardProps) => {
   return (
+    <>
     <S.CardContainer>
+      <S.TitleContainer>
+        <S.Image>
+          <img alt="profile photo" src={avatar_url}/>
+        </S.Image>
 
-        <S.TitleContainer>
-          <S.Image>
-            <img alt="profile photo" src={avatar_url}/>
-          </S.Image>
+        <S.TitleContent>
+          <S.Title>
 
-          <S.TitleContent>
-            <S.Title>
+            <S.H2>
+              {name}
+            </S.H2>
 
-              <S.H2>
-                {name}
-              </S.H2>
+            <S.Span>Joined at {new Date(created_at).toLocaleDateString('en-US',{
+              day: '2-digit',
+              month: 'long',
+              year: 'numeric'
+            })}</S.Span>
+          </S.Title>
 
-              <S.Span>Joined at {new Date(created_at).toLocaleDateString('en-US',{
-                day: '2-digit',
-                month: 'long',
-                year: 'numeric'
-              })}</S.Span>
-            </S.Title>
-
-            <S.Link href={url}>
-              @{login}
-            </S.Link>
-          </S.TitleContent>
-        </S.TitleContainer>
+          <S.Link href={url}>
+            @{login}
+          </S.Link>
+        </S.TitleContent>
+      </S.TitleContainer>
 
       <S.ContentContainer>
-
         <S.Paragraph>
           {bio}
         </S.Paragraph>
@@ -74,9 +73,11 @@ export const Card = ({name, created_at, login, url, bio, public_repos, followers
             {htmlUrl ?? 'Not available' }
           </S.UserLink>
         </S.UserLinksContent>
-
       </S.ContentContainer>
-
     </S.CardContainer>
+    {/*<S.CardContainer>*/}
+    {/*  <GitHubCalendar username={login} colorScheme={'dark'} />*/}
+    {/*</S.CardContainer>*/}
+    </>
   );
 };
