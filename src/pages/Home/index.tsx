@@ -2,11 +2,10 @@ import * as S from './style.ts'
 import { Input } from "../../components/Input";
 import { Header } from "../../components/Header";
 import { Card } from "../../components/Card";
-import { useState } from "react";
+import { useState} from "react";
 import { getData } from './api'
 import { CardProps } from "./api/interface";
 import { toast } from "react-toastify";
-import { Alert } from "../../components/Alert";
 
 export const Home = () => {
 
@@ -22,15 +21,15 @@ export const Home = () => {
     } catch (error) {
       toast.error('User not found!');
     }
-
   }
 
   return (
-    <S.Container>
-      <Header/>
-      <Input onClick={clickHandler} setUsername={setUsername}/>
-      {data && <Card {...data} />}
-      <Alert />
-    </S.Container>
+    <S.Main>
+      <S.Container>
+        <Header/>
+        <Input onClick={clickHandler} setUsername={setUsername}/>
+        {data && <Card {...data} />}
+      </S.Container>
+    </S.Main>
   );
 };
