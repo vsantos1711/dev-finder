@@ -3,9 +3,7 @@ import { Input } from "../../components/Input";
 import { Header } from "../../components/Header";
 import { Card } from "../../components/Card";
 import { useState } from "react";
-import {
-  getData
-} from './api'
+import { getData } from './api'
 import { CardProps } from "./api/interface";
 import { toast } from "react-toastify";
 import { Alert } from "../../components/Alert";
@@ -26,7 +24,6 @@ export const Home = () => {
     }
 
   }
-
 
   return (
     <S.Container>

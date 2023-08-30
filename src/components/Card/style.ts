@@ -80,6 +80,7 @@ export const Paragraph = styled.p`
 export const UserContent = styled.div`
   display: flex;
   border-radius: 1rem;
+  flex-wrap: wrap;
   padding: 1.5rem 2.5rem;
   gap: 4rem;
   background-color:  ${({ theme }) => theme.backgroundColor};
