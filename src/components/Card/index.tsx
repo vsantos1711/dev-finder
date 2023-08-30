@@ -3,7 +3,7 @@ import { Building2, Link, MapPin, Twitter } from "lucide-react";
 import { CardProps } from "../../pages/Home/api/interface";
 import { Calendar } from "../Calendar";
 
-export const Card = ({name, created_at, login, url, bio, public_repos, followers, following, location, htmlUrl, twitter_username, blog, avatar_url}: CardProps) => {
+export const Card = ({name, created_at, login, company, bio, public_repos, followers, following, location, html_url, twitter_username, blog, avatar_url}: CardProps) => {
   return (
     <>
       <S.CardContainer>
@@ -26,7 +26,7 @@ export const Card = ({name, created_at, login, url, bio, public_repos, followers
               })}</S.Span>
             </S.Title>
 
-            <S.Link href={url}>
+            <S.Link href={html_url} target="_blank">
               @{login}
             </S.Link>
           </S.TitleContent>
@@ -67,9 +67,9 @@ export const Card = ({name, created_at, login, url, bio, public_repos, followers
               <Link />
               {blog ?? 'Not available' }
             </S.UserLink>
-            <S.UserLink href='#' >
+            <S.UserLink href='#'>
               <Building2/>
-              {htmlUrl ?? 'Not available' }
+              {company ?? 'Not available' }
             </S.UserLink>
           </S.UserLinksContent>
         </S.ContentContainer>
