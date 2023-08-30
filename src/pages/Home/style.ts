@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  margin: 0 auto;
   flex-direction: column;
-  height: 100vh;
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+  min-height: 100vh;
   max-width: 800px;
   justify-content: center;
-  align-items: center;
   background-color: ${({ theme }) => theme.backgroundColor};
 `
