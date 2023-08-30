@@ -16,6 +16,8 @@ export const InputContainer = styled.form`
 export const Input = styled.input`
   width: 100%;
   font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
   color: ${({ theme }) => theme.primaryTextColor};
   &::placeholder {
    color: ${({ theme }) => theme.primaryTextColor}
