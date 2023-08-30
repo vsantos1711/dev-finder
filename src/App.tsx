@@ -1,14 +1,13 @@
 import './Global.css'
 import { Home } from "./pages/Home";
-import { defaultTheme } from "./style/theme.ts";
-import { ThemeProvider } from "styled-components";
+import {AppContextProvider} from "./context";
 
 function App() {
 
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <AppContextProvider>
       <Home/>
-    </ThemeProvider>
+    </AppContextProvider>
   )
 }
 
