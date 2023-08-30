@@ -15,9 +15,9 @@ export const Card = ({name, created_at, login, url, bio, public_repos, followers
           <S.TitleContent>
             <S.Title>
 
-              <S.H2>
+              <h2>
                 {name}
-              </S.H2>
+              </h2>
 
               <S.Span>Joined at {new Date(created_at).toLocaleDateString('en-US',{
                 day: '2-digit',

@@ -6,7 +6,7 @@ export const InputContainer = styled.form`
   align-items: center;
   padding: 0.5rem 1.5rem;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   justify-content: space-between;
   border-radius: 1rem;
   background-color: ${({ theme }) => theme.primaryColor};

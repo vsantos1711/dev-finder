@@ -54,10 +54,6 @@ export const ContentContainer = styled.div`
   }
 `;
 
-export const H2 = styled.h2`
-  font-size: x-large;
-  width: fit-content;
-`;
 
 export const Span = styled.span`
   font-size: small;
@@ -73,7 +69,7 @@ export const Link = styled.a`
 
 export const Paragraph = styled.p`
   color: ${({ theme }) => theme.primaryTextColor};
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 `;
 
 export const UserContent = styled.div`
@@ -83,7 +79,7 @@ export const UserContent = styled.div`
   padding: 1.5rem 2.5rem;
   gap: 4rem;
   background-color:  ${({ theme }) => theme.backgroundColor};
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 `;
 
 export const UserItem = styled.div`
