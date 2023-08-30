@@ -12,7 +12,7 @@ export const Title = styled.h1`
   font-size: 2rem;
 `;
 
-export const Theme = styled.button`
+export const Button = styled.button`
   color: ${({ theme }) => theme.primaryTextColor};
   display: flex;
   align-items: center;
