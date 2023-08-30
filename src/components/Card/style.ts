@@ -67,9 +67,8 @@ export const Span = styled.span`
 
 export const Link = styled.a`
   color: ${({ theme }) => theme.secondaryColor};
-  display: block;
   font-size: 1rem;
-
+  width: fit-content;
 `;
 
 export const Paragraph = styled.p`
@@ -107,7 +106,7 @@ export const UserLinksContent = styled.div`
 `;
 export const UserLink = styled.a`
   min-width: 200px;
-  padding: 0.5rem 0 ;
+  padding: 0.5rem ;
   display: flex;
   gap: 0.7rem;
   align-items: center;
