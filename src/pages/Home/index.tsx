@@ -1,34 +1,25 @@
-import * as S from './style.ts'
+import * as S from "./style.ts";
 import { Input } from "../../components/Input";
 import { Header } from "../../components/Header";
-import { Card } from "../../components/Card";
-import { useState} from "react";
-import { getData } from './api'
-import { CardProps } from "./api/interface";
 import { toast } from "react-toastify";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
+  const [username, setUsername] = useState("");
 
-  const[data, setData] = useState<CardProps>()
-  const[username, setUsername] = useState('')
+  const navigate = useNavigate();
 
   async function clickHandler() {
-    if(!username) return toast.warning('Please, enter a username')
-    try {
-      const userInfos = await getData(username);
-      toast.success('Github user info loaded!');
-      setData(userInfos);
-    } catch (error) {
-      toast.error('User not found!');
-    }
+    if (!username) return toast.warning("Please, enter a username");
+    navigate(`${username}`);
   }
 
   return (
     <S.Main>
       <S.Container>
-        <Header/>
-        <Input onClick={clickHandler} setUsername={setUsername}/>
-        {data && <Card {...data} />}
+        <Header />
+        <Input onClick={clickHandler} setUsername={setUsername} />
       </S.Container>
     </S.Main>
   );
