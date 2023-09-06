@@ -6,8 +6,7 @@ import { Input } from "../../components/Input";
 import { toast } from "react-toastify";
 import { getData } from "../Home/api";
 import { CardProps } from "../Home/api/interface";
-import { useParams } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 export const UserProfile = () => {
   const [data, setData] = useState<CardProps>();
