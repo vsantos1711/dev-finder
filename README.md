@@ -1,4 +1,10 @@
 # DevFinder
+## :dart: Status do projeto
+
+<img src="http://img.shields.io/static/v1?label=STATUS&message=ONLINE&color=GREEN&style=for-the-badge"/>
+Veja o projeto ao vivo aqui: https://dev-finder-blush.vercel.app/
+
+# 
 ### FRONT-END em React + TypeScript + Vite
 
 <p align="center">
