@@ -3,10 +3,7 @@
 
 <img src="http://img.shields.io/static/v1?label=STATUS&message=ONLINE&color=GREEN&style=for-the-badge"/>
 
-Veja o projeto ao vivo aqui: <a  target="_blank"> Clique Aqui! </a>
-  <a href="https://dev-finder-blush.vercel.app/">
-    <img src="http://img.shields.io/static/v1?label=STATUS&message=ONLINE&color=GREEN&style=for-the-badge" target="_blank">
-  </a> 
+Veja o projeto ao vivo aqui: <a target="_blank" href="https://dev-finder-blush.vercel.app/" > Clique Aqui! </a>
 # 
 ### FRONT-END em React + TypeScript + Vite
 
