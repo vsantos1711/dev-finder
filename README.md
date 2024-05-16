@@ -1,35 +1,42 @@
-# DevFinder
-## :dart: Status do projeto
-
-<img src="http://img.shields.io/static/v1?label=STATUS&message=ONLINE&color=GREEN&style=for-the-badge"/>
-
-Veja o projeto ao vivo aqui: <a target="_blank" href="https://dev-finder-blush.vercel.app/" > Clique Aqui! </a>
-# 
-### FRONT-END em React + TypeScript + Vite
+<h1 align="center">🔎 Dev Finder</h1>
 
 <p align="center">
-   <img  src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="Logo do Meu Aplicativo" width="180">
+  <i align="center">A app how get dev infos from the github</i>
+  <img src="public/assets/project-example.png" />
 </p>
 
-Certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
+## Project Status
 
-- Node.js (versão LTS)
-- pnpm (você pode rodar ```npm install -g pnpm``` para obter o pnpm)
+<img src="http://img.shields.io/static/v1?label=STATUS&message=DONE&color=GREEN&style=for-the-badge"/>
 
-## Instalação
+## Description
 
-   ```shell
-   pnpm install
-   ```
+DevFinder: A simple app to explore detailed profiles of GitHub developers. Discover repositories, contributions, followers, and more. Perfect for recruiters and collaborators.
 
-## Configuração
+## Tools
 
-Antes de executar o aplicativo, você pode precisar configurar algumas variáveis de ambiente ou ajustar outras configurações. Verifique o arquivo .env ou outras configurações relevantes no projeto.
+[<img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" />](https://react.dev/)
+[<img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white" />](https://vitejs.dev/)
+[<img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" />](https://www.typescriptlang.org/)
+[<img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" />](https://styled-components.com/)
 
-## Execução
+## Running the project
 
-Inicie o aplicativo:
+1. Clone the repository and install dependencies:
 
-   ```shell
-   pnpm run dev
-   ```
+```shell
+git clone https://github.com/vsantos1711/dev-finder.git && cd dev-finder &&
+pnpm install
+```
+
+2. Run the app:
+
+```shell
+pnpm run dev
+```
+
+## Contributors
+
+<a href="https://github.com/vsantos1711/countries/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=vsantos1711/countries" />
+</a>
